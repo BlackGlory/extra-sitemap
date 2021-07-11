@@ -2,7 +2,7 @@ import { createSitemap } from '@src/create-sitemap'
 import { ChangeFrequency, IURLItem } from '@src/types'
 import { toArray } from 'iterable-operator'
 import '@blackglory/jest-matchers'
-import { stripIndent } from 'common-tags'
+import { dedent } from 'extra-tags'
 
 describe('createSitemap(urlItems: Iterable<IURLItem>): Iterable<string>', () => {
   test('empty items', () => {
@@ -12,7 +12,7 @@ describe('createSitemap(urlItems: Iterable<IURLItem>): Iterable<string>', () => 
     const proResult = toArray(result).join('')
 
     expect(result).toBeIterable()
-    expect(proResult).toBe(stripIndent`
+    expect(proResult).toBe(dedent`
       <?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       </urlset>
@@ -29,7 +29,7 @@ describe('createSitemap(urlItems: Iterable<IURLItem>): Iterable<string>', () => 
     const proResult = toArray(result).join('')
 
     expect(result).toBeIterable()
-    expect(proResult).toBe(stripIndent`
+    expect(proResult).toBe(dedent`
       <?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <url>
@@ -63,7 +63,7 @@ describe('createSitemap(urlItems: Iterable<IURLItem>): Iterable<string>', () => 
     const proResult = toArray(result).join('')
 
     expect(result).toBeIterable()
-    expect(proResult).toBe(stripIndent`
+    expect(proResult).toBe(dedent`
       <?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <url>

@@ -2,7 +2,7 @@ import { createSitemapIndex } from '@src/create-sitemap-index'
 import { ISitemapItem } from '@src/types'
 import { toArray } from 'iterable-operator'
 import '@blackglory/jest-matchers'
-import { stripIndent } from 'common-tags'
+import { dedent } from 'extra-tags'
 
 describe('createSitemapIndex(sitemapItems: Iterable<ISitemapItem>): Iterable<string>', () => {
   test('empty items', () => {
@@ -12,7 +12,7 @@ describe('createSitemapIndex(sitemapItems: Iterable<ISitemapItem>): Iterable<str
     const proResult = toArray(result).join('')
 
     expect(result).toBeIterable()
-    expect(proResult).toBe(stripIndent`
+    expect(proResult).toBe(dedent`
       <?xml version="1.0" encoding="UTF-8"?>
       <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       </sitemapindex>
@@ -29,7 +29,7 @@ describe('createSitemapIndex(sitemapItems: Iterable<ISitemapItem>): Iterable<str
     const proResult = toArray(result).join('')
 
     expect(result).toBeIterable()
-    expect(proResult).toBe(stripIndent`
+    expect(proResult).toBe(dedent`
       <?xml version="1.0" encoding="UTF-8"?>
       <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <sitemap>
@@ -59,7 +59,7 @@ describe('createSitemapIndex(sitemapItems: Iterable<ISitemapItem>): Iterable<str
     const proResult = toArray(result).join('')
 
     expect(result).toBeIterable()
-    expect(proResult).toBe(stripIndent`
+    expect(proResult).toBe(dedent`
       <?xml version="1.0" encoding="UTF-8"?>
       <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <sitemap>
