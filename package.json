@@ -67,7 +67,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "extra-tags": "^0.2.0",
+    "extra-tags": "^0.2.2",
     "justypes": "^0.1.5"
   }
 }
