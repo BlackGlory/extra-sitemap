@@ -1,7 +1,5 @@
 # extra-sitemap
-
 ## Install
-
 ```sh
 npm install --save extra-sitemap
 # or
@@ -9,7 +7,6 @@ yarn add extra-sitemap
 ```
 
 ## API
-
 ```ts
 enum ChangeFrequency {
   Always
@@ -35,25 +32,21 @@ interface ISitemapItem {
 ```
 
 ### createSitemap
-
 ```ts
 function createSitemap(urlItems: Iterable<IURLItem>): Iterable<string>
 ```
 
 ### createSitemapAsync
-
 ```ts
 function createSitemapAsync(urlItems: AsyncIterable<IURLItem>): AsyncIterable<string>
 ```
 
 ### createSitemapIndex
-
 ```ts
 function createSitemapIndex(sitemapItems: Iterable<ISitemapItem>): Iterable<string>
 ```
 
 ### createSitemapIndexAsync
-
 ```ts
 function createSitemapIndexAsync(
   sitemapItems: AsyncIterable<ISitemapItem>
