@@ -1,11 +1,12 @@
-import { removeBlankLines, removeFalsyValues, dedent } from 'extra-tags'
-import { Falsy } from 'justypes'
+import { filter, dedent } from 'extra-tags'
+import { removeBlankLines } from 'extra-utils'
+import { Falsy, isntFalsy } from '@blackglory/prelude'
 
 export function xml(strings: TemplateStringsArray, ...values: Array<string | Falsy>) {
   return (
     removeBlankLines(
       dedent(
-        ...removeFalsyValues(strings, ...values)
+        ...filter(isntFalsy, strings, ...values)
       )
     )
   )
