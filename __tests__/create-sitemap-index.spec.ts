@@ -1,18 +1,16 @@
 import { createSitemapIndex } from '@src/create-sitemap-index'
 import { ISitemapItem } from '@src/types'
 import { toArray } from 'iterable-operator'
-import '@blackglory/jest-matchers'
 import { dedent } from 'extra-tags'
 
 describe('createSitemapIndex(sitemapItems: Iterable<ISitemapItem>): Iterable<string>', () => {
   test('empty items', () => {
     const items: ISitemapItem[] = []
 
-    const result = createSitemapIndex(items)
-    const proResult = toArray(result).join('')
+    const iter = createSitemapIndex(items)
+    const result = toArray(iter).join('')
 
-    expect(result).toBeIterable()
-    expect(proResult).toBe(dedent`
+    expect(result).toBe(dedent`
       <?xml version="1.0" encoding="UTF-8"?>
       <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       </sitemapindex>
@@ -25,11 +23,10 @@ describe('createSitemapIndex(sitemapItems: Iterable<ISitemapItem>): Iterable<str
     , { url: 'http://example.com/sitemap-2.xml' }
     ]
 
-    const result = createSitemapIndex(items)
-    const proResult = toArray(result).join('')
+    const iter = createSitemapIndex(items)
+    const result = toArray(iter).join('')
 
-    expect(result).toBeIterable()
-    expect(proResult).toBe(dedent`
+    expect(result).toBe(dedent`
       <?xml version="1.0" encoding="UTF-8"?>
       <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <sitemap>
@@ -55,11 +52,10 @@ describe('createSitemapIndex(sitemapItems: Iterable<ISitemapItem>): Iterable<str
       }
     ]
 
-    const result = createSitemapIndex(items)
-    const proResult = toArray(result).join('')
+    const iter = createSitemapIndex(items)
+    const result = toArray(iter).join('')
 
-    expect(result).toBeIterable()
-    expect(proResult).toBe(dedent`
+    expect(result).toBe(dedent`
       <?xml version="1.0" encoding="UTF-8"?>
       <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <sitemap>
