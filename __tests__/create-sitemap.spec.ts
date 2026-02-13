@@ -45,13 +45,13 @@ describe('createSitemap(urlItems: Iterable<IURLItem>): Iterable<string>', () => 
       {
         url: 'http://example.com/1'
       , changeFrequency: ChangeFrequency.Always
-      , lastModdified: date
+      , lastModified: date
       , priority: 0.5
       }
     , {
         url: 'http://example.com/2'
       , changeFrequency: ChangeFrequency.Always
-      , lastModdified: date
+      , lastModified: date
       , priority: 0.5
       }
     ]

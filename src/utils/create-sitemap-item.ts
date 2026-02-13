@@ -2,7 +2,7 @@ import { IURLItem } from '@src/types'
 import { xml } from './xml'
 
 export function createSitemapItem(urlItem: IURLItem): string {
-  const { url, changeFrequency, lastModdified, priority } = urlItem
+  const { url, changeFrequency, lastModified: lastModdified, priority } = urlItem
 
   return xml`
     <url>
