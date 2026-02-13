@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/BlackGlory/extra-sitemap/compare/v0.2.5...v0.3.0) (2026-02-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* - CommonJS => ESM
+- Node.js v16 => Node.js v22
+
+### Bug Fixes
+
+* typo `IURLItem.lastModdified` => `IURLItem.lastModified` ([504d1a0](https://github.com/BlackGlory/extra-sitemap/commit/504d1a0dfc2e8b68c6a7e959d9549363fc18ff2d))
+
+
+* upgrade dependencies ([0840e64](https://github.com/BlackGlory/extra-sitemap/commit/0840e64f8b37b5e9f5f3b7588c09cb85c876530d))
+
 ### [0.2.5](https://github.com/BlackGlory/extra-sitemap/compare/v0.2.4...v0.2.5) (2023-06-11)
 
 
