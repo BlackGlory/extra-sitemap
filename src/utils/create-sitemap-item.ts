@@ -1,5 +1,5 @@
-import { IURLItem } from '@src/types'
-import { xml } from './xml'
+import { IURLItem } from '@src/types.js'
+import { xml } from './xml.js'
 
 export function createSitemapItem(urlItem: IURLItem): string {
   const { url, changeFrequency, lastModified: lastModdified, priority } = urlItem

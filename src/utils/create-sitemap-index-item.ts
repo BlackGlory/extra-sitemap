@@ -1,5 +1,5 @@
-import { ISitemapItem } from '@src/types'
-import { xml } from './xml'
+import { ISitemapItem } from '@src/types.js'
+import { xml } from './xml.js'
 
 export function createSitemapIndexItem(sitemapItem: ISitemapItem) {
   const { url, lastModified } = sitemapItem

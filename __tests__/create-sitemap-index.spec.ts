@@ -1,5 +1,6 @@
-import { createSitemapIndex } from '@src/create-sitemap-index'
-import { ISitemapItem } from '@src/types'
+import { describe, test, expect } from 'vitest'
+import { createSitemapIndex } from '@src/create-sitemap-index.js'
+import { ISitemapItem } from '@src/types.js'
 import { toArray } from 'iterable-operator'
 import { dedent } from 'extra-tags'
 

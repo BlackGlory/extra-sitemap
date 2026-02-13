@@ -1,6 +1,6 @@
-import { addIndents } from '@utils/add-indents'
-import { createSitemapIndexItem } from '@utils/create-sitemap-index-item'
-import { ISitemapItem } from '@src/types'
+import { addIndents } from '@utils/add-indents.js'
+import { createSitemapIndexItem } from '@utils/create-sitemap-index-item.js'
+import { ISitemapItem } from '@src/types.js'
 
 export async function* createSitemapIndexAsync(
   sitemapItems: AsyncIterable<ISitemapItem>

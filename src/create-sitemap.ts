@@ -1,6 +1,6 @@
-import { addIndents } from '@utils/add-indents'
-import { createSitemapItem } from '@utils/create-sitemap-item'
-import { IURLItem } from '@src/types'
+import { addIndents } from '@utils/add-indents.js'
+import { createSitemapItem } from '@utils/create-sitemap-item.js'
+import { IURLItem } from '@src/types.js'
 
 export function* createSitemap(urlItems: Iterable<IURLItem>): Iterable<string> {
   yield '<?xml version="1.0" encoding="UTF-8"?>\n'

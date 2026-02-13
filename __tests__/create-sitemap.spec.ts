@@ -1,5 +1,6 @@
-import { createSitemap } from '@src/create-sitemap'
-import { ChangeFrequency, IURLItem } from '@src/types'
+import { describe, test, expect } from 'vitest'
+import { createSitemap } from '@src/create-sitemap.js'
+import { ChangeFrequency, IURLItem } from '@src/types.js'
 import { toArray } from 'iterable-operator'
 import { dedent } from 'extra-tags'
 

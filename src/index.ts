@@ -1,7 +1,7 @@
-export * from './types'
+export * from './types.js'
 
-export * from './create-sitemap'
-export * from './create-sitemap-async'
+export * from './create-sitemap.js'
+export * from './create-sitemap-async.js'
 
-export * from './create-sitemap-index'
-export * from './create-sitemap-index-async'
+export * from './create-sitemap-index.js'
+export * from './create-sitemap-index-async.js'
