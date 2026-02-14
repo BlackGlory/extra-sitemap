@@ -70,4 +70,22 @@ describe('createSitemapIndex(sitemapItems: Iterable<ISitemapItem>): Iterable<str
       </sitemapindex>
     `)
   })
+
+  test('edge: escape urls', () => {
+    const items: ISitemapItem[] = [
+      { url: 'http://example.com/?foo&bar' }
+    ]
+
+    const iter = createSitemapIndex(items)
+    const result = toArray(iter).join('')
+
+    expect(result).toBe(dedent`
+      <?xml version="1.0" encoding="UTF-8"?>
+      <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <sitemap>
+          <loc>http://example.com/?foo&amp;bar</loc>
+        </sitemap>
+      </sitemapindex>
+    `)
+  })
 })

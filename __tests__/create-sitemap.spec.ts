@@ -78,4 +78,22 @@ describe('createSitemap(urlItems: Iterable<IURLItem>): Iterable<string>', () => 
       </urlset>
     `)
   })
+
+  test('edge: escape urls', () => {
+    const items: IURLItem[] = [
+      { url: 'http://example.com/?foo&bar' }
+    ]
+
+    const iter = createSitemap(items)
+    const result = toArray(iter).join('')
+
+    expect(result).toBe(dedent`
+      <?xml version="1.0" encoding="UTF-8"?>
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <url>
+          <loc>http://example.com/?foo&amp;bar</loc>
+        </url>
+      </urlset>
+    `)
+  })
 })

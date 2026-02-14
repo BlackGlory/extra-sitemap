@@ -56,6 +56,7 @@
   "dependencies": {
     "@blackglory/prelude": "^0.4.0",
     "extra-tags": "^0.5.4",
-    "extra-utils": "^5.20.0"
+    "extra-utils": "^5.20.0",
+    "html-entities": "^2.6.0"
   }
 }
